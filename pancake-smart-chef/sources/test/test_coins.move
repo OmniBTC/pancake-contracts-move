@@ -8,7 +8,7 @@ module test_coin::test_coins {
     struct TestBUSD {}
     struct TestUSDC {}
     struct TestBNB {}
-    struct TestAPT {}
+    struct Test30DEC {}
 
     public entry fun init_coins(): signer {
         let account = account::create_account_for_test(@test_coin);
@@ -18,14 +18,14 @@ module test_coin::test_coins {
             &account,
             b"Cake",
             b"CAKE",
-            9,
+            8,
             false,
         );
         managed_coin::initialize<TestBUSD>(
             &account,
             b"Busd",
             b"BUSD",
-            9,
+            8,
             false,
         );
 
@@ -33,7 +33,7 @@ module test_coin::test_coins {
             &account,
             b"USDC",
             b"USDC",
-            9,
+            8,
             false,
         );
 
@@ -41,15 +41,15 @@ module test_coin::test_coins {
             &account,
             b"BNB",
             b"BNB",
-            9,
+            8,
             false,
         );
 
-        managed_coin::initialize<TestAPT>(
+        managed_coin::initialize<Test30DEC>(
             &account,
-            b"Aptos",
-            b"APT",
-            9,
+            b"Test30DEC",
+            b"Test30DEC",
+            30,
             false,
         );
 
